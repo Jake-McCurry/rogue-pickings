@@ -146,9 +146,6 @@ header nav ul li a{
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
-	display: flex;
-	height: auto;
-	justify-content: start;
 	width: 100%;
 }
 
@@ -189,21 +186,48 @@ footer span {
 	text-transform: lowercase;
 }
 
+/* -------------- Media Queries -------------- */
 
-/* ----- Media query stuff 
+@media all and (min-width:768px) {
+	.bottom-section {
+        align-items: flex-start;
+		border-top: 1px solid #eee;
+		justify-content: space-between;
+	}
 
-.section-one h4 {
-	padding: 10px 0;
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
+	}
+	
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0 20px;
+	}	
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
-}
-
-
